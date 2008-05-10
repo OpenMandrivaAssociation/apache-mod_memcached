@@ -1,12 +1,12 @@
 #Module-Specific definitions
-%define apache_version 2.2.4
+%define apache_version 2.2.8
 %define mod_name mod_memcached
 %define mod_conf B30_%{mod_name}.conf
 %define mod_so %{mod_name}.so
 
 Summary:	DSO module for the apache Web server
 Name:		apache-%{mod_name}
-Version:	0.1
+Version:	0.3
 Release:	%mkrel 1
 Group:		System/Servers
 License:	Apache License
@@ -21,7 +21,7 @@ Requires:	apache-conf >= %{apache_version}
 Requires:	apache >= %{apache_version}
 BuildRequires:  apache-devel >= %{apache_version}
 BuildRequires:  memcached-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This is an Apache module that provides GET, PUT, and DELETE services to
@@ -68,4 +68,3 @@ rm -rf %{buildroot}
 %doc ChangeLog README
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/httpd/modules.d/%{mod_conf}
 %attr(0755,root,root) %{_libdir}/apache-extramodules/%{mod_so}
-
