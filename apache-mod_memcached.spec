@@ -20,7 +20,7 @@ Requires(pre):  apache >= %{apache_version}
 Requires:	apache-conf >= %{apache_version}
 Requires:	apache >= %{apache_version}
 BuildRequires:  apache-devel >= %{apache_version}
-BuildRequires:  memcached-devel
+BuildRequires:  libmemcached-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
