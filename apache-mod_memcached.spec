@@ -10,7 +10,7 @@ Version:	0.3
 Release:	11
 Group:		System/Servers
 License:	Apache License
-URL:		http://tangent.org/
+URL:		https://tangent.org/
 Source0:	http://download.tangent.org/mod_memcached-%{version}.tar.gz
 Source1:	%{mod_conf}
 Requires(pre): rpm-helper
